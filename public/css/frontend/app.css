@@ -1,3 +1,11 @@
+@font-face {font-family: "kw";
+  src: url('//at.alicdn.com/t/font_dw0e1lnrzf7s0pb9.eot?t=1488271391886'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_dw0e1lnrzf7s0pb9.eot?t=1488271391886#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_dw0e1lnrzf7s0pb9.woff?t=1488271391886') format('woff'), /* chrome, firefox */
+  url('//at.alicdn.com/t/font_dw0e1lnrzf7s0pb9.ttf?t=1488271391886') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_dw0e1lnrzf7s0pb9.svg?t=1488271391886#kw') format('svg'); /* iOS 4.1- */
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -1841,6 +1849,12 @@ input[type=range] {
 
 select[multiple],select[size] {
   height: auto
+}
+
+input[type=checkbox]:focus,input[type=file]:focus,input[type=radio]:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px
 }
 
 output {
@@ -3899,7 +3913,7 @@ tbody.collapse.in {
 }
 
 .breadcrumb>li+li:before {
-  content: "/Ã‚Â ";
+  content: "/Â ";
   padding: 0 5px;
   color: #ccc
 }
@@ -7413,5 +7427,53 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
 #captcha_widget {
   width: 100%;
   width: 100% !important;
+}
+
+input[type=checkbox],input[type=radio] {
+    margin: 4px 0 0;
+    margin-top: 1px\9;
+    line-height: normal
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0 0 0 0;
+}
+
+input[type="checkbox"], input[type="checkbox"]:active, input[type="checkbox"]:focus {
+    outline: 0;
+}
+
+input[type="checkbox"]:checked {
+    outline: none !important;
+}
+
+input[type="checkbox"]:focus, input[type="checkbox"]:focus::before {
+    outline: none !important;
+}
+
+input[type="checkbox"]:before {
+    display: block;
+    font-family: 'kw';
+    content: "\e65b";
+    font-size: 1.3em;
+    line-height: 1.3em;
+    font-weight: normal;
+    vertical-align: middle;
+    color: #999;
+    transform: rotate(90deg);
+    transition: transform 0.2s;
+    margin: 0 0 0 -3px;
+    width: 20px;
+    height: 20px;
+}
+
+input[type="checkbox"]:checked::before {
+    content: "\e65c";
+    color: #000;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    transform: rotate(0);
 }
 

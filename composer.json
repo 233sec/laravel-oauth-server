@@ -17,7 +17,9 @@
         "arcanedev/no-captcha": "~3.0",
         "spatie/laravel-backup": "^3.0",
         "yajra/laravel-datatables-oracle": "~6.0",
-        "lucadegasperi/oauth2-server-laravel": "^5.2"
+        "lucadegasperi/oauth2-server-laravel": "^5.2",
+        "233sec/datatablesx": "dev-master",
+        "tsssec/laravel-editable": "dev-next"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -62,5 +64,12 @@
     },
     "config": {
         "preferred-install": "dist"
-    }
+    },
+    "repositories": [
+        {"type": "vcs", "url": "https://code.aliyun.com/233sec/laravel-editable.git"},
+        {"type": "vcs", "url": "https://code.aliyun.com/laravel5/framework.git"},
+        {"type": "vcs", "url": "https://code.aliyun.com/233sec/datatablesx.git"},
+        {"type": "composer", "url": "https://packagist.phpcomposer.com"},
+        {"packagist": false}
+    ]
 }

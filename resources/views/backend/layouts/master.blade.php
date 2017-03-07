@@ -24,17 +24,31 @@
         @else
             {{ Html::style('css/backend/app.css') }}
         @endif
+        {{ Html::style('css/backend/plugin/datatables/dataTables.bootstrap.min.css') }}
+        {{ Html::style('js/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}
+        {{ Html::style('css/backend/plugin/daterangepicker/daterangepicker.css') }}
+
+        {{ Html::style('js/vendor/select2/select2.min.css') }}
+        {{ Html::style('js/vendor/select2/select2-bootstrap.min.css') }}
+        {{ Html::style('js/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css') }}
+        {{ Html::style('js/vendor/bootstrap-tagsinput/bootstrap-tagsinput-typeahead.css') }}
+        {{ Html::style('css/backend/app.css') }}
 
         @yield('after-styles-end')
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        {{ HTML::script('https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js') }}
-        {{ HTML::script('https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js') }}
+       <!--[if lt IE 9]>
+        {{ HTML::script('js/vendor/html5shiv/r29/html5.min.js') }}
+        {{ HTML::script('js/vendor/respond.js/1.4.2/respond.min.js') }}
         <![endif]-->
     </head>
-    <body class="skin-{{ config('backend.theme') }} {{ config('backend.layout') }}">
+    <body class="skin-{{ config('backend.theme') }} {{ config('backend.layout') }} sidebar-mini">
+        <script type="text/javascript">
+            try{
+                document.body.className+=' '+document.cookie.match(/bodyClass=([^;]+)/)[1];
+            }catch(e){}
+        </script>
         @include('includes.partials.logged-in-as')
 
         <div class="wrapper">
@@ -62,12 +76,29 @@
         </div><!-- ./wrapper -->
 
         <!-- JavaScripts -->
-        {{ HTML::script('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js') }}
-        <script>window.jQuery || document.write('<script src="{{asset('js/vendor/jquery/jquery-2.1.4.min.js')}}"><\/script>')</script>
+        <!-- JavaScripts -->
+        {{ Html::script('js/vendor/jquery/jquery-2.1.4.min.js') }}
         {{ Html::script('js/vendor/bootstrap/bootstrap.min.js') }}
+        {{ Html::script('js/backend/plugin/datatables/jquery.dataTables.min.js') }}
+        {{ Html::script('js/backend/plugin/datatables/dataTables.bootstrap.min.js') }}
+        {{ Html::script('js/vendor/bootbox/bootbox.min.js') }}
+        {{ Html::script('js/vendor/moment/moment-with-locales.min.js') }}
+        {{ Html::script('js/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}
+        {{ Html::script('js/vendor/daterangepicker/daterangepicker.js') }}
+        {{ Html::script('ckeditor/ckeditor.js') }}
+        {{ Html::script('js/vendor/select2/select2.min.js') }}
+
+        {{ Html::script('js/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js') }}
+        {{ Html::script('js/vendor/parsley/parsley.min.js') }}
+        {{ Html::script('js/vendor/sortable/Sortable.min.js') }}
+        {{ Html::script('js/vendor/ajaxfileuploader/ajaxfileuploader.min.js') }}
+        {{ Html::script('js/backend/plugin/datatables/dataTables.buttons.min.js') }}
+        {{ Html::script('js/backend/plugin/datatables/jszip.min.js') }}
+        {{ Html::script('js/backend/plugin/datatables/buttons.html5.min.js') }}
+        <script type="text/javascript"> $.queries = {!! json_encode($_GET)  !!}; </script>
 
         @yield('before-scripts-end')
-        {{ HTML::script(elixir('js/backend.js')) }}
+        {{ Html::script('js/backend/app.js') }}
         @yield('after-scripts-end')
     </body>
 </html>

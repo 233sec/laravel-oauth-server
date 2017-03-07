@@ -4,9 +4,47 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2192add8c768a6ccc16428b4ec8ee908",
-    "content-hash": "e58101e246e9e1ff49767723ee8ada80",
+    "hash": "83dc29395a16a1bc86c5851c84a8da9f",
+    "content-hash": "a91734b893be12c83e0974ae6f742293",
     "packages": [
+        {
+            "name": "233sec/datatablesx",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://code.aliyun.com/233sec/datatablesx.git",
+                "reference": "1c1dc46bcbcba7fc0dfd2fdec40c87ca66fbd692"
+            },
+            "require": {
+                "arcanedev/support": "~3.0",
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.6",
+                "psr/http-message": "~1.0"
+            },
+            "require-dev": {
+                "arcanedev/laravel-html": "~5.0",
+                "phpunit/phpcov": "~2.0|~3.0",
+                "phpunit/phpunit": "~4.0|~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Datatables\\X\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Datatables\\X\\Tests": "tests/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "233sec Team"
+                }
+            ],
+            "time": "2017-02-21 02:33:27"
+        },
         {
             "name": "arcanedev/log-viewer",
             "version": "3.10.1",
@@ -3098,6 +3136,41 @@
             "time": "2016-09-20 12:50:39"
         },
         {
+            "name": "tsssec/laravel-editable",
+            "version": "dev-next",
+            "source": {
+                "type": "git",
+                "url": "https://code.aliyun.com/233sec/laravel-editable.git",
+                "reference": "21ad9da2eb8be5c2b8b14e9b16ee0b4382508649"
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "arcanedev/laravel-html": "~5.0",
+                "phpunit/phpcov": "~2.0|~3.0",
+                "phpunit/phpunit": "~4.0|~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tsssec\\Editable\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Tsssec\\Editable\\Tests\\": "tests/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "xiaohui.lam"
+                }
+            ],
+            "time": "2017-01-28 01:12:52"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.4.0",
             "source": {
@@ -4705,7 +4778,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "233sec/datatablesx": 20,
+        "tsssec/laravel-editable": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

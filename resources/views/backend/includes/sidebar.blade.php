@@ -35,6 +35,15 @@
             </li>
 
             @permission('manage-users')
+                <li class="{{ Active::pattern('admin/oauth/client/*') }}">
+                    {{ link_to_route('admin.oauth.client.index', '管理应用') }}
+                </li>
+                <li class="{{ Active::pattern('admin/oauth/group/*') }}">
+                    {{ link_to_route('admin.oauth.group.index', '管理应用组') }}
+                </li>
+            @endauth
+
+            @permission('manage-users')
                 <li class="{{ Active::pattern('admin/access/*') }}">
                     {{ link_to_route('admin.access.user.index', trans('menus.backend.access.title')) }}
                 </li>
