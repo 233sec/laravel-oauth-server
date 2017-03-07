@@ -1,6 +1,8 @@
 <?php
 
 Route::group(['middleware' => 'web'], function() {
+    require (__DIR__ . '/Routes/Oauth/Server.php');
+
     /**
      * Switch between the included languages
      */
