@@ -29,6 +29,7 @@ return [
          * Index 1 of sub-array is the PHP locale code for setlocale()
          * Index 2 of sub-array is whether or not to use RTL (right-to-left) css for this language
          */
+        'zh-CN'    => ['zh_CN', 'zh_CN', false],
         'ar'    => ['ar', 'ar_AR', true],
         'da'    => ['da', 'da_DK', false],
         'de'    => ['de', 'de_DE', false],

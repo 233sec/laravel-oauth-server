@@ -22,7 +22,7 @@
             {{ Html::style(elixir('css/backend-rtl.css')) }}
             {{ Html::style(elixir('css/rtl.css')) }}
         @else
-            {{ Html::style(elixir('css/backend.css')) }}
+            {{ Html::style('css/backend/app.css') }}
         @endif
 
         @yield('after-styles-end')
