@@ -17,9 +17,10 @@
         "arcanedev/no-captcha": "~3.0",
         "spatie/laravel-backup": "^3.0",
         "yajra/laravel-datatables-oracle": "~6.0",
-        "lucadegasperi/oauth2-server-laravel": "dev-master",
         "233sec/datatablesx": "dev-master",
-        "tsssec/laravel-editable": "dev-next"
+        "tsssec/laravel-editable": "dev-next",
+        "233sec/lib-oauth2-server": "dev-master",
+        "233sec/oauth2-server-laravel": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -62,16 +63,16 @@
             "php artisan optimize"
         ]
     },
-    "config": {
-        "preferred-install": "dist"
-    },
     "repositories": [
         {"type": "vcs", "url": "https://code.aliyun.com/233sec/laravel-editable.git"},
         {"type": "vcs", "url": "https://code.aliyun.com/laravel5/framework.git"},
         {"type": "vcs", "url": "https://code.aliyun.com/233sec/datatablesx.git"},
-        {"type": "vcs", "url": "https://code.aliyun.com/233sec/lib-oauth2-server.git"},
         {"type": "vcs", "url": "https://code.aliyun.com/233sec/oauth2-server-laravel.git"},
+        {"type": "vcs", "url": "https://code.aliyun.com/233sec/lib-oauth2-server.git"},
         {"type": "composer", "url": "https://packagist.phpcomposer.com"},
         {"packagist": false}
-    ]
+    ],
+    "config": {
+        "preferred-install": "dist"
+    }
 }
