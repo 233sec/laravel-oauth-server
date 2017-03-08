@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
-<form method="post" action="{{route('oauth.authorize.post', $params)}}">
+    {{ Form::open(['route' => ['oauth.authorize.post'] + $params, 'class' => 'form', 'role' => 'form', 'method' => 'post']) }}
     <div class="form-group">
         <b>用户</b> {{ access()->user()->name }} <a href="{{ URL::route('frontend.user.dashboard') }}" target="_blank" class="btn btn-default btn-xs pull-right">我的资料</a> <a href="{{ URL::route('auth.logout') }}" target="_self" class="btn btn-link btn-xs pull-right">换个账号</a>
     </div>
@@ -25,7 +25,7 @@
 
     <button type="submit" name="approve" value="1" class="btn btn-success btn-sm no-border" id="btn-approve">授权登录</button>
     <button type="submit" name="deny" value="1" class="btn btn-link btn-sm no-border">取消返回</button>
-</form>
+    {{ Form::close() }}
 @stop
 @section('after-scripts-end')
 <script>

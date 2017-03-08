@@ -35,3 +35,12 @@ Route::post('oauth/authorize', ['as' => 'oauth.authorize.post', 'middleware' => 
 Route::post('oauth/access_token', function() {
     return Response::json(Authorizer::issueAccessToken());
 });
+
+Route::get('oauth/user_info', ['middleware' => ['oauth'], function() {
+    $client_id = Authorizer::getClientId();
+    $user_id   = Authorizer::getResourceOwnerId();
+    $hash      = hash('sha256', $client_id . '|' . $user_id . '|' . getenv('APP_KEY'));
+    $openid    = super_base_convert($hash, '1234567890abcde', '1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+
+    return Response::json(['openid' => $openid]);
+}]);
