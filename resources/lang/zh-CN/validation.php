@@ -150,13 +150,13 @@ return [
         ],
 
         'frontend'=> [
-            'email'=>'电子邮件地址',
+            'email'=>'邮箱',
             'name'=>'名称',
             'password'=>'密码',
-            'password_confirmation'=>'密码确认',
+            'password_confirmation'=>'确认',
             'old_password'=>'旧密码',
             'new_password'=>'新密码',
-            'new_password_confirmation'=>'新密码确认',
+            'new_password_confirmation'=>'确认',
         ],
     ],
 
