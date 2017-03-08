@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "83dc29395a16a1bc86c5851c84a8da9f",
-    "content-hash": "a91734b893be12c83e0974ae6f742293",
+    "hash": "06378d7677c947ff4c4414137a2eb7b8",
+    "content-hash": "9ef34d13b7caa56249b0832e2df2b5c0",
     "packages": [
         {
             "name": "233sec/datatablesx",
@@ -1456,17 +1456,11 @@
         },
         {
             "name": "lucadegasperi/oauth2-server-laravel",
-            "version": "5.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/lucadegasperi/oauth2-server-laravel.git",
-                "reference": "c04fead3be7abad9170be6191432ba6d06029734"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/lucadegasperi/oauth2-server-laravel/c04fead3be7abad9170be6191432ba6d06029734.zip",
-                "reference": "c04fead3be7abad9170be6191432ba6d06029734",
-                "shasum": ""
+                "url": "https://code.aliyun.com/233sec/oauth2-server-laravel.git",
+                "reference": "a48718eb6ed5e874955fd458fc8a374b440ba119"
             },
             "require": {
                 "illuminate/config": "5.1.* || 5.2.* || 5.3.*",
@@ -1496,7 +1490,18 @@
                     "LucaDegasperi\\OAuth2Server\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "LucaDegasperi\\OAuth2Server\\Tests\\": "tests"
+                },
+                "classmap": [
+                    "database"
+                ],
+                "files": [
+                    "tests/AbstractTestCase.php",
+                    "tests/integration/AbstractDBTestCase.php"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -1519,8 +1524,7 @@
                 "oauth2",
                 "server"
             ],
-            "abandoned": "laravel/passport",
-            "time": "2016-08-10 13:50:33"
+            "time": "2017-03-08 03:51:42"
         },
         {
             "name": "maatwebsite/excel",
@@ -3141,7 +3145,7 @@
             "source": {
                 "type": "git",
                 "url": "https://code.aliyun.com/233sec/laravel-editable.git",
-                "reference": "21ad9da2eb8be5c2b8b14e9b16ee0b4382508649"
+                "reference": "56cc90fd0f348640d08c9eecea026a5a9fdbf121"
             },
             "require": {
                 "ext-json": "*",
@@ -3168,7 +3172,7 @@
                     "name": "xiaohui.lam"
                 }
             ],
-            "time": "2017-01-28 01:12:52"
+            "time": "2017-03-07 19:02:04"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -4779,6 +4783,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "lucadegasperi/oauth2-server-laravel": 20,
         "233sec/datatablesx": 20,
         "tsssec/laravel-editable": 20
     },

@@ -4,6 +4,7 @@
 Homestead.yaml
 Homestead.json
 .env
+.phpcd
 
 /public/css/frontend.css
 /public/css/frontend.css.map

@@ -26,7 +26,7 @@
                         <tr>
                             <th>应用</th>
                             <th>CLIENT_ID</th>
-                            <th>SECRET</th>
+                            <th>集团ID</th>
                             <th>创建时间</th>
                             <th>修改时间</th>
                             <th>操作</th>
@@ -65,7 +65,7 @@
                 columns: [
                     {data: 'name', name: 'name'},
                     {data: 'id', name: 'id'},
-                    {data: 'secret', name: 'secret'},
+                    {data: 'group_id', name: 'group_id'},
                     {data: 'created_at', name: 'created_at'},
                     {data: 'updated_at', name: 'updated_at'},
                     {data: function(row){

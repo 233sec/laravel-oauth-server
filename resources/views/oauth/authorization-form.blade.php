@@ -2,7 +2,7 @@
     <head>
         {{ Html::style('css/backend/app.css') }}
     </head>
-    <body>
+    <body class="hide">
             <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
 <div class="page-header">
   <h2>授权 <small> {{ config('app.name') }}</small></h2>
@@ -32,11 +32,21 @@
                     <input type="hidden" name="state" value="{{$params['state']}}">
                     <input type="hidden" name="scope" value="{{$params['scope']}}">
 
-                    <button type="submit" name="approve" value="1" class="btn btn-success btn-sm no-border">授权登录</button>
+                    <button type="submit" name="approve" value="1" class="btn btn-success btn-sm no-border" id="btn-approve">授权登录</button>
                     <button type="submit" name="deny" value="1" class="btn btn-link btn-sm no-border">取消返回</button>
                 </form>
   </div>
 </div>
             </div>
+        {{ Html::script('js/vendor/jquery/jquery-2.1.4.min.js') }}
+<script>
+$(document).ready(function(){
+@if ($client->getAutoSubmit())
+    $('#btn-approve').click();
+@else
+    $('body').removeClass('hide');
+@endif
+});
+</script>
     </body>
 <html>

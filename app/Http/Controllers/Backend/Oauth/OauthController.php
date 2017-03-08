@@ -28,6 +28,8 @@ class OauthController extends Controller{
             'i18n' => [
                 'lengend_1'     => '应用编辑',
                 'name'          => '应用名称',
+                'auto_submit'   => '自动提交',
+                'group_id'      => '集团ID',
                 'id'            => '应用ID',
                 'secret'        => '私钥',
                 'created_at'    => '创建时间',
@@ -50,6 +52,8 @@ class OauthController extends Controller{
             'i18n' => [
                 'lengend_1'     => '应用编辑',
                 'name'          => '应用名称',
+                'auto_submit'   => '自动提交',
+                'group_id'      => '集团ID',
                 'id'            => '应用ID',
                 'secret'        => '私钥',
                 'created_at'    => '创建时间',
