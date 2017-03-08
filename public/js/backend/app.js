@@ -1163,7 +1163,8 @@ function _init() {
   $('.sidebar-menu li a').each(function(){
     var url = $(this).attr('href');
     if(!/javascript\:/.test(url)){
-      var url2 = url.replace(location.protocol + '//' + location.host + '/admin', '');
+    try{
+      var url2 = url.replace(location.origin + '/admin', '');
 
       var g = url2.match(/\/([\w])/g);
       for(var i in g){ g[i] = g[i].substr(1); }
@@ -1172,6 +1173,7 @@ function _init() {
         id: url,
         text: $(this).text() + ' - ' + url2
       });
+      }catch(e){}
     }
   });
 
