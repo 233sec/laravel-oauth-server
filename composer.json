@@ -20,7 +20,9 @@
         "233sec/datatablesx": "dev-master",
         "tsssec/laravel-editable": "dev-next",
         "233sec/lib-oauth2-server": "dev-master",
-        "233sec/oauth2-server-laravel": "dev-master"
+        "233sec/oauth2-server-laravel": "dev-master",
+        "scil/laravel-fly": "dev-master",
+        "predis/predis": "^1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

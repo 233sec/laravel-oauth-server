@@ -8,7 +8,17 @@ use Illuminate\Foundation\Http\Kernel as HttpKernel;
  * Class Kernel
  * @package App\Http
  */
-class Kernel extends HttpKernel
+if (defined('LARAVELFLY_GREEDY')) {
+    if (LARAVELFLY_GREEDY) {
+        class WhichKernel extends \LaravelFly\Greedy\Kernel { }
+    } else {
+        class WhichKernel extends \LaravelFly\Kernel { }
+    }
+} else {
+    class WhichKernel extends HttpKernel { }
+}
+
+class Kernel extends WhichKernel
 {
     /**
      * The application's global HTTP middleware stack.
