@@ -71,6 +71,7 @@
         {"type": "vcs", "url": "https://code.aliyun.com/233sec/datatablesx.git"},
         {"type": "vcs", "url": "https://code.aliyun.com/233sec/oauth2-server-laravel.git"},
         {"type": "vcs", "url": "https://code.aliyun.com/233sec/lib-oauth2-server.git"},
+        {"type": "vcs", "url": "https://github.com/xiaohuilam/LaravelFly.git"},
         {"type": "composer", "url": "https://packagist.phpcomposer.com"},
         {"packagist": false}
     ],
