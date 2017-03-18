@@ -1,5 +1,5 @@
 ## OAuth-Server
-[![Build Status](https://travis-ci.org/233sec/laravel-oauth-server.png)](https://travis-ci.org/233sec/laravel-oauth-server)
+[![Build Status](https://travis-ci.org/233sec/laravel-oauth-server.svg)](https://travis-ci.org/233sec/laravel-oauth-server)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
 An oauth server based on Laravel 5.2, it's simple, but powerful.
