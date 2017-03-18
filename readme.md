@@ -1,4 +1,5 @@
 ## OAuth-Server
+[![Build Status](https://travis-ci.org/233sec/laravel-oauth-server.png)](https://travis-ci.org/233sec/laravel-oauth-server)
 An oauth server based on Laravel 5.2, it's simple, but powerful.
 
 ## Installation
