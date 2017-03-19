@@ -150,6 +150,7 @@ return [
         ],
 
         'frontend'=> [
+            'username'=>'用户名',
             'email'=>'邮箱',
             'name'=>'名称',
             'password'=>'密码',

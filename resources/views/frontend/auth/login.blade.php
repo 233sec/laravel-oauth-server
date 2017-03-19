@@ -11,9 +11,9 @@
 </div><!--form-group-->
 
 <div class="form-group">
-    {{ Form::label('email', trans('validation.attributes.frontend.email'), ['class' => 'col-md-3 control-label']) }}
+    {{ Form::label('email', trans('validation.attributes.frontend.username'), ['class' => 'col-md-3 control-label']) }}
     <div class="col-md-8">
-        {{ Form::input('email', 'email', null, ['class' => 'form-control input-sm', 'placeholder' => trans('validation.attributes.frontend.email')]) }}
+        {{ Form::input('text', 'email', null, ['class' => 'form-control input-sm', 'placeholder' => trans('validation.attributes.frontend.email')]) }}
     </div><!--col-md-9-->
 </div><!--form-group-->
 

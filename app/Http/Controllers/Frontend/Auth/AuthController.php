@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Frontend\Auth;
 
+use URL;
+use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\Controller;
 use App\Services\Access\Traits\ConfirmUsers;
 use App\Services\Access\Traits\UseSocialite;
@@ -21,10 +23,10 @@ class AuthController extends Controller
     /**
      * @param UserRepositoryContract $user
      */
-    public function __construct(UserRepositoryContract $user)
+    public function __construct(Request $request, UserRepositoryContract $user)
     {
         //Where to redirect after logging out
-        $this->redirectAfterLogout = route('frontend.index');
+        $this->redirectAfterLogout = URL::previous() ? URL::previous() : route('frontend.index');
 
         $this->user = $user;
     }

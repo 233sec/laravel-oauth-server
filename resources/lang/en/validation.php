@@ -150,6 +150,7 @@ return [
         ],
 
         'frontend' => [
+            'username' => 'Username',
             'email' => 'E-mail Address',
             'name' => 'Name',
             'password' => 'Password',
