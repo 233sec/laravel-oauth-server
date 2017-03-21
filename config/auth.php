@@ -66,7 +66,7 @@ return [
 
     'providers' => [
         'users' => [
-            'driver' => 'eloquent',
+            'driver' => 'oauth-server-eloquent',
             'model' => App\Models\Access\User\User::class,
         ],
 

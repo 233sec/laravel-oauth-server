@@ -26,6 +26,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies($gate);
 
-        //
+        \Auth::provider('oauth-server-eloquent', function ($app, $config) {
+            return new OauthServerEloquentUserProvider($this->app['hash'], $config['model']);
+        });
     }
 }
