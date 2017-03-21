@@ -42,5 +42,5 @@ Route::get('oauth/user_info', ['middleware' => ['oauth'], function() {
     $hash      = hash('sha256', $client_id . '|' . $user_id . '|' . getenv('APP_KEY'));
     $openid    = \math\base_convert($hash, '1234567890abcde', '1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
 
-    return Response::json(['openid' => $openid]);
+    return Response::json(['id' => $openid, 'openid' => $openid]);
 }]);
